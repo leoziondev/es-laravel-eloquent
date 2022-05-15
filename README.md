@@ -32,6 +32,11 @@ Debugbar
 composer require barryvdh/laravel-debugbar --dev
 ```
 
+Doctrine DBAL
+```
+composer require doctrine/dbal
+```
+
 ### Documentações
 - [Laravel 9x](https://laravel.com/docs/9.x)
 - [Telescope](https://laravel.com/docs/9.x/telescope)
