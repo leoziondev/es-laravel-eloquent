@@ -3,6 +3,18 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/pagination', function () {
+    $filter = request('name');
+    $totalPage = request('paginate', 10);
+
+    // $users = User::paginate(15);
+    // $users = User::where('name', 'LIKE', '%in%')->paginate(15);
+    // $users = User::where('name', 'LIKE', '%'.$filter.'%')->paginate(10);
+    $users = User::where('name', 'LIKE', '%'.$filter.'%')->paginate($totalPage);
+
+    return $users;
+});
+
 Route::get('/where', function(User $user) {
     $filter = 'un';
 

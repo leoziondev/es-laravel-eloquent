@@ -19,6 +19,7 @@ Temas de estudo abordados no curso
 - Iniciando com Eloquent
     - Formas de consulta de dados
     - Filtrar registros
+    - Paginação
 - Accessors & Mutators
 - Avançando com Eloquent
 - Factories e Seeders
