@@ -15,7 +15,7 @@ class Post extends Model
 {
     use HasFactory, SoftDeletes, DefaultAccessors;
 
-    // protected $fillable = ['user_id', 'title', 'body', 'date']; Remove user_id because PostObserve
+    // protected $fillable = ['user_id', 'title', 'body', 'date']; // Remove user_id because PostObserve
     protected $fillable = ['title', 'body', 'date'];
 
     protected $casts = [
@@ -25,7 +25,7 @@ class Post extends Model
     ];
 
     protected $dispatchesEvents = [
-        'created' => PostCreated::class,
+        //'created' => PostCreated::class,
     ];
 
     protected static function booted()
