@@ -25,6 +25,7 @@ Temas de estudo abordados no curso
     - Mass Assignment
     - Atualizar registro
     - Deletar registro
+    - Soft Deleting
 - Accessors & Mutators
 - Avançando com Eloquent
 - Factories e Seeders

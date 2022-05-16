@@ -6,8 +6,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
+Route::get('/delete2', function() {
+    Post::destroy(4);
+
+    $posts = Post::get();
+
+    return $posts;
+});
+
 Route::get('/delete', function() {
-    $post = Post::where('id', 3)->first();
+    $post = Post::where('id', 4)->first();
     // Post::destroy(ID);
 
     if (!$post)
