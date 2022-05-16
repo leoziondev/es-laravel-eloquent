@@ -3,6 +3,13 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/orderby', function () {
+    // $users = User::orderBy('id', 'desc')->get(); // default ASC
+    $users = User::orderBy('name')->get();
+
+    return $users;
+});
+
 Route::get('/pagination', function () {
     $filter = request('name');
     $totalPage = request('paginate', 10);
