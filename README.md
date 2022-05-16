@@ -34,6 +34,7 @@ Temas de estudo abordados no curso
 - Avançando com Eloquent
     - Local Scope
     - Anonymous Global Scope
+    - Global Scopes
 - Factories e Seeders
 
 ## Instalações

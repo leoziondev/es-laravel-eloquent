@@ -2,9 +2,17 @@
 
 use App\Models\Post;
 use App\Models\User;
+use App\Scopes\YearScope;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
+
+Route::get('/global-localscope', function () {
+    // $posts = Post::get();
+    $posts = Post::withoutGlobalScope(YearScope::class)->get();
+
+    return $posts;
+});
 
 Route::get('/anonymous-localscope', function () {
     // $posts = Post::get();
