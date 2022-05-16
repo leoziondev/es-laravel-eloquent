@@ -27,6 +27,8 @@ Temas de estudo abordados no curso
     - Deletar registro
     - Soft Deleting
 - Accessors & Mutators
+    - Criando um Accessor
+    - Reuso de accessors com Trait
 - Avançando com Eloquent
 - Factories e Seeders
 

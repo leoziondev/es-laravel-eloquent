@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
+Route::get('/accessor', function () {
+    $posts = Post::get();
+    return $posts;
+
+    // $post = Post::find(1);
+    // return $post->title_and_body;
+});
+
 Route::get('/delete2', function() {
     Post::destroy(4);
 
