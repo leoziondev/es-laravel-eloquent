@@ -18,6 +18,7 @@ Temas de estudo abordados no curso
     - Novas colunas sem perca de dados
 - Iniciando com Eloquent
     - Formas de consulta de dados
+    - Filtrar registros
 - Accessors & Mutators
 - Avançando com Eloquent
 - Factories e Seeders

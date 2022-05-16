@@ -3,6 +3,31 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/where', function(User $user) {
+    $filter = 'un';
+
+    // $users = $user->get();
+    // $users = $user->where('email', 'hsmitham@example.com')->first();
+    // $users = $user->where('email', 'LIKE', "%" . $filter . "%")->get();
+    // $users = $user->where('name', 'LIKE', "%" . $filter . "%")
+    //     ->orWhere('name', 'Carlos')
+    //     ->get();
+    // $users = $user->where('name', 'LIKE', "%" . $filter . "%")
+    //     ->whereNot('name', 'Carlos')
+    //     // ->whereDate()
+    //     // ->whereIn('email', [])
+    //     // ->orWhereIn('email', [])
+    //     ->get();
+    $users = $user->where('name', 'LIKE', "%" . $filter . "%")
+        ->orWhere(function ($query) use ($filter) {
+            $query->where('name', '<>', 'Carlos');
+            $query->where('name', '=', $filter);
+        })
+        ->toSql();
+
+    dd($users);
+});
+
 Route::get('/select', function() {
     // $users = User::all();
     // $users = User::get();
