@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
+Route::get('/delete', function() {
+    $post = Post::where('id', 3)->first();
+    // Post::destroy(ID);
+
+    if (!$post)
+        return 'Post not found';
+
+    dd($post->delete());
+});
+
 Route::get('/update', function () {
     if (!$post = Post::find(1))
         return "Post not found";
