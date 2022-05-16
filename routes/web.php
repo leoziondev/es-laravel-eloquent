@@ -6,6 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
+// Route::get('/insert2', function (Request $request) {
+Route::get('/insert2', function () {
+    // $post = Post::create($request->all());
+    $post = Post::create([
+        'user_id'   => 2,
+        'title'     => "Lorem ipsum dollor 03",
+        'body'      => "Sit amet ipsum lorem dollor",
+        'date'      => date('Y-m-d'),
+    ]);
+
+    // dd($post);
+
+    $posts = Post::latest()->get();
+
+    return $posts;
+});
+
 Route::get('/insert', function (Post $post, Request $request) {
     $post->user_id = 1;
     // $post->title = "Post 01 " . Str::random(10);
