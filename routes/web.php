@@ -1,7 +1,23 @@
 <?php
 
+use App\Models\Post;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+
+Route::get('/insert', function (Post $post, Request $request) {
+    $post->user_id = 1;
+    // $post->title = "Post 01 " . Str::random(10);
+    $post->title = $request->name;
+    $post->body = "Content 01";
+    $post->date = date('Y-m-d');
+
+    $post->save();
+
+    $posts = Post::get();
+    return $posts;
+});
 
 Route::get('/orderby', function () {
     // $users = User::orderBy('id', 'desc')->get(); // default ASC

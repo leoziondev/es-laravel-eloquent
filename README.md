@@ -21,6 +21,7 @@ Temas de estudo abordados no curso
     - Filtrar registros
     - Paginação
     - Ordenação
+    - Inserir Registros
 - Accessors & Mutators
 - Avançando com Eloquent
 - Factories e Seeders
