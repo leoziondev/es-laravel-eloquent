@@ -14,8 +14,8 @@ trait DefaultAccessors
         return $this->title . ' - ' . $this->body;
     }
 
-    public function getDateAttribute()
-    {
-        return date('d-m-Y');
-    }
+    // public function getDateAttribute()
+    // {
+    //     return date('d-m-Y');
+    // }
 }

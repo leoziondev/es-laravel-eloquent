@@ -29,6 +29,7 @@ Temas de estudo abordados no curso
 - Accessors & Mutators
     - Criando um Accessor
     - Reuso de accessors com Trait
+    - Casting
 - Avançando com Eloquent
 - Factories e Seeders
 
