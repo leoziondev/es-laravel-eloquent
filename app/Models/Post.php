@@ -16,6 +16,7 @@ class Post extends Model
 
     protected $casts = [
         // 'date' => 'date',
+        'date' => 'datetime:d/m/Y',
         'active' => 'boolean'
     ];
 
@@ -29,8 +30,13 @@ class Post extends Model
     //     return $this->title . ' - ' . $this->body;
     // }
 
-    public function getDateAttribute($value)
+    public function setDateAttribute($value)
     {
-        return Carbon::make($value)->format('d/m/Y');
+        $this->attributes['date'] = Carbon::make($value)->format('Y-m-d');
     }
+
+    // public function getDateAttribute($value)
+    // {
+    //     return Carbon::make($value)->format('d/m/Y');
+    // }
 }
