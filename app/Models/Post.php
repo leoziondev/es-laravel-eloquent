@@ -20,6 +20,29 @@ class Post extends Model
         'active' => 'boolean'
     ];
 
+    public function scopeLastWeek($query)
+    {
+        return $this->whereDate('date', '>=', now()->subDays(2))
+            ->whereDate('date', '<=', now()->subDays(1));
+
+    }
+
+    public function scopeToday($query)
+    {
+        return $this->whereDate('date', now());
+
+    }
+
+    public function scopeBetweenDays($query, $firstDate, $lastDate)
+    {
+        $firstDate = Carbon::make($firstDate)->format('Y-m-d');
+        $lastDate = Carbon::make($lastDate)->format('Y-m-d');
+
+        return $this->whereDate('date', '>=', $firstDate)
+            ->whereDate('date', '<=', $lastDate);
+
+    }
+
     // public function getTitleAttribute($value)
     // {
     //     return strtoupper($value);

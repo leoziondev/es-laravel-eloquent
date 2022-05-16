@@ -32,6 +32,7 @@ Temas de estudo abordados no curso
     - Casting
     - Criando um Mutator
 - Avançando com Eloquent
+    - Local Scope
 - Factories e Seeders
 
 ## Instalações
