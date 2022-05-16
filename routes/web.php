@@ -7,6 +7,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
+Route::get('/events', function () {
+    $post = Post::create([
+        'user_id'   => 9,
+        'title'     => 'Lorem ipsum ' . Str::random(10),
+        'body'      => Str::random(100),
+        'date'      => now(),
+    ]);
+
+    return $post;
+});
+
 Route::get('/observer', function () {
     // $user = User::first();
     $post = Post::create([

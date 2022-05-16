@@ -36,6 +36,7 @@ Temas de estudo abordados no curso
     - Anonymous Global Scope
     - Global Scopes
     - Observers
+    - Eventos
 - Factories e Seeders
 
 ## Instalações
