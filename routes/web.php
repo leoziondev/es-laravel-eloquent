@@ -6,6 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
+Route::get('/update', function () {
+    if (!$post = Post::find(1))
+        return "Post not found";
+
+    // $post->title = "Title Updated";
+    // $post->save();
+
+    $post->update([
+        'title' => "Title Updated Again",
+    ]);
+    // or
+    // $post->update($request->all());
+
+
+    dd($post);
+});
+
 // Route::get('/insert2', function (Request $request) {
 Route::get('/insert2', function () {
     // $post = Post::create($request->all());
