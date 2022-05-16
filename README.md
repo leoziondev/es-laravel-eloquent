@@ -33,6 +33,7 @@ Temas de estudo abordados no curso
     - Criando um Mutator
 - Avançando com Eloquent
     - Local Scope
+    - Anonymous Global Scope
 - Factories e Seeders
 
 ## Instalações
